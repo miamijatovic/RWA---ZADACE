@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Prosti brojevi</title>
+</head>
+<body>
+  <script>
+    function isPrime(n) {
+      if (n < 2) return false;
+      for (let i = 2; i <= Math.sqrt(n); i++) {
+        if (n % i === 0) return false;
+      }
+      return true;
+    }
+
+    for (let i = 1; i <= 1000; i++) {
+      if (isPrime(i)) {
+        console.log(i);
+        document.write(i + "<br>");
+      }
+    }
+  </script>
+</body>
+</html>

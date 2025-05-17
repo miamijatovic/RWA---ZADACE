@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pas i zvuk</title>
+</head>
+<body>
+  <h1>Pas Reks</h1>
+  <p>Ime: Reks</p>
+  <p>Godine: 2</p>
+  
+  <button id="zvukBtn">Reci zvuk psa</button>
+  <p id="rezultat"></p>
+
+  <script>
+    let pas = {
+      ime: "Reks",
+      godine: 2
+    };
+
+    pas.zvuk = function() {
+      return "AV AV!";
+    };
+
+    document.getElementById("zvukBtn").addEventListener("click", function() {
+      document.getElementById("rezultat").textContent = pas.zvuk();
+    });
+  </script>
+</body>
+</html>

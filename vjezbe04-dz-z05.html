@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Objekti</title>
+</head>
+<body>
+  <script>
+    let osobe = [
+      { firstName: "Marko", lastName: "Maric", age: 40, eyeColor: "black" },
+      { firstName: "Ana", lastName: "Anić", age: 30, eyeColor: "blue" },
+      { firstName: "Ivan", lastName: "Ivić", age: 25, eyeColor: "green" }
+    ];
+
+    for (let i = 0; i < osobe.length; i++) {
+      for (let key in osobe[i]) {
+        document.write(key + ": " + osobe[i][key] + "<br>");
+      }
+      document.write("<hr>");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Obrada temperatura</title>
+</head>
+<body>
+  <h1>Provjeri konzolu za rezultat</h1>
+
+  <script>
+    const tempDay = ['2023-11-29', -1, 0, -0.5, 0.5, 0, 1.2, 1.8, 2, 3, 4, 6, 9, 12, 7, 6, 6, 8, 5, 4, 2, 3, 2, 1, 0];
+
+    function obradiTemperaturu(podaci) {
+      const datum = podaci[0];
+      const temperature = podaci.slice(1);  // svi osim prvog elementa
+
+      const minTemp = Math.min(...temperature);
+      const maxTemp = Math.max(...temperature);
+
+      const suma = temperature.reduce((acc, val) => acc + val, 0);
+      const prosjek = suma / temperature.length;
+
+      console.log(`Datum: ${datum}`);
+      console.log(`Najmanja temperatura: ${minTemp}°C`);
+      console.log(`Najveća temperatura: ${maxTemp}°C`);
+      console.log(`Prosječna temperatura: ${prosjek.toFixed(2)}°C`);
+    }
+
+    obradiTemperaturu(tempDay);
+  </script>
+</body>
+</html>

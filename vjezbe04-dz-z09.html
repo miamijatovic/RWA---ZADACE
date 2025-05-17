@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Savršeni brojevi</title>
+</head>
+<body>
+  <h1>Pronađi savršene brojeve do</h1>
+  <input type="number" id="maxBroj" placeholder="Unesi broj" />
+  <button onclick="prikaziSavrsene()">Prikaži savršene brojeve</button>
+
+  <p id="rezultat"></p>
+
+  <script>
+    function ispisiSavrseneBrojeve(n) {
+      let savrseni = [];
+      for (let broj = 1; broj <= n; broj++) {
+        let sumaDjelitelja = 0;
+        for (let i = 1; i <= broj / 2; i++) {
+          if (broj % i === 0) {
+            sumaDjelitelja += i;
+          }
+        }
+        if (sumaDjelitelja === broj && broj !== 0) {
+          savrseni.push(broj);
+        }
+      }
+      return savrseni;
+    }
+
+    function prikaziSavrsene() {
+      let n = Number(document.getElementById('maxBroj').value);
+      if (isNaN(n) || n < 1) {
+        document.getElementById('rezultat').textContent = "Molim te unesi pozitivan broj!";
+        return;
+      }
+      let rezultat = ispisiSavrseneBrojeve(n);
+      if (rezultat.length === 0) {
+        document.getElementById('rezultat').textContent = "Nema savršenih brojeva u tom rasponu.";
+      } else {
+        document.getElementById('rezultat').textContent = "Savršeni brojevi: " + rezultat.join(", ");
+      }
+    }
+  </script>
+</body>
+</html>

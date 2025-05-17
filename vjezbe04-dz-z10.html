@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pet random brojeva</title>
+</head>
+<body>
+  <h1>Generiraj 5 random brojeva između dva broja</h1>
+
+  <label for="broj1">Unesi prvi broj:</label>
+  <input type="number" id="broj1" /><br><br>
+
+  <label for="broj2">Unesi drugi broj:</label>
+  <input type="number" id="broj2" /><br><br>
+
+  <button onclick="generirajRandom()">Generiraj brojeve</button>
+
+  <p id="rezultat"></p>
+
+  <script>
+    function generirajPetRandomBrojeva(min, max) {
+      let randomBrojevi = [];
+      // osiguravamo da je min manji od max
+      if (min > max) {
+        let temp = min;
+        min = max;
+        max = temp;
+      }
+      for (let i = 0; i < 5; i++) {
+        // generiraj cijeli broj između min i max (uključivo)
+        let rand = Math.floor(Math.random() * (max - min + 1)) + min;
+        randomBrojevi.push(rand);
+      }
+      return randomBrojevi;
+    }
+
+    function generirajRandom() {
+      let broj1 = Number(document.getElementById('broj1').value);
+      let broj2 = Number(document.getElementById('broj2').value);
+      if (isNaN(broj1) || isNaN(broj2)) {
+        document.getElementById('rezultat').textContent = "Molim te unesi oba broja!";
+        return;
+      }
+      let randomBrojevi = generirajPetRandomBrojeva(broj1, broj2);
+      document.getElementById('rezultat').textContent = "Random brojevi: " + randomBrojevi.join(", ");
+    }
+  </script>
+</body>
+</html>
+
