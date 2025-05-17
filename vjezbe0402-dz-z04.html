@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head><meta charset="UTF-8"><title>Ocjena paragraf</title></head>
+<body>
+  <form>
+    <input type="number" id="ocjena" min="1" max="5" placeholder="Unesi ocjenu">
+    <button type="button" onclick="ispisi()">Prikaži</button>
+  </form>
+  <p id="rezultat"></p>
+
+  <script>
+    function ispisi() {
+      let o = document.getElementById("ocjena").value;
+      let poruke = ["", "Nedovoljan", "Dovoljan", "Dobar", "Vrlo dobar", "Odličan"];
+      document.getElementById("rezultat").innerText = poruke[o] || "Nevažeća ocjena!";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head><meta charset="UTF-8"><title>Zbrajanje</title></head>
+<body>
+  <form>
+    <input type="number" id="a" placeholder="Broj 1">
+    <input type="number" id="b" placeholder="Broj 2">
+    <input type="text" id="rez" readonly placeholder="Rezultat">
+    <button type="button" onclick="zbroji()">Zbroji</button>
+  </form>
+
+  <script>
+    function zbroji() {
+      let x = parseFloat(document.getElementById("a").value);
+      let y = parseFloat(document.getElementById("b").value);
+      document.getElementById("rez").value = x + y;
+    }
+  </script>
+</body>
+</html>

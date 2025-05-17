@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head><meta charset="UTF-8"><title>Godine</title></head>
+<body>
+  <form>
+    <label for="datum">Datum rođenja:</label>
+    <input type="date" id="datum">
+    <button type="button" onclick="izracunaj()">Izračunaj</button>
+  </form>
+
+  <script>
+    function izracunaj() {
+      let datum = new Date(document.getElementById("datum").value);
+      let danas = new Date();
+      let godine = danas.getFullYear() - datum.getFullYear();
+      if (
+        danas.getMonth() < datum.getMonth() ||
+        (danas.getMonth() === datum.getMonth() && danas.getDate() < datum.getDate())
+      ) {
+        godine--;
+      }
+      alert("Imate " + godine + " godina.");
+    }
+  </script>
+</body>
+</html>

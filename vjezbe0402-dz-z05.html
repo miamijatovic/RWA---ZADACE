@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head><meta charset="UTF-8"><title>Registarska oznaka</title></head>
+<body>
+  <form>
+    <input type="text" id="oznaka" placeholder="Unesi oznaku (npr. M23-A-123)">
+    <button type="button" onclick="validiraj()">Validiraj</button>
+  </form>
+
+  <script>
+    function validiraj() {
+      let unos = document.getElementById("oznaka").value.trim();
+      let regex = /^[A-Z]{1,2}\d{2}-[A-Z]-\d{3}$/;
+      alert(regex.test(unos) ? "Ispravno!" : "Neispravan format!");
+    }
+  </script>
+</body>
+</html>

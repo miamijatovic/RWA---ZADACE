@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head><meta charset="UTF-8"><title>Kalkulator</title></head>
+<body>
+  <form>
+    <input type="number" id="x" placeholder="x">
+    <input type="number" id="y" placeholder="y">
+    <select id="operacija">
+      <option value="add">+</option>
+      <option value="sub">−</option>
+      <option value="mul">*</option>
+      <option value="div">/</option>
+      <option value="sin">sin(x)</option>
+      <option value="cos">cos(x)</option>
+      <option value="tan">tan(x)</option>
+      <option value="log">log(x)</option>
+      <option value="ln">ln(x)</option>
+      <option value="kv">x²</option>
+      <option value="kub">x³</option>
+      <option value="pow">xʸ</option>
+    </select>
+    <button type="button" onclick="izracunaj()">Izračunaj</button>
+  </form>
+
+  <script>
+    function izracunaj() {
+      let x = parseFloat(document.getElementById("x").value);
+      let y = parseFloat(document.getElementById("y").value);
+      let op = document.getElementById("operacija").value;
+      let rez;
+
+      switch (op) {
+        case "add": rez = x + y; break;
+        case "sub": rez = x - y; break;
+        case "mul": rez = x * y; break;
+        case "div": rez = x / y; break;
+        case "sin": rez = Math.sin(x); break;
+        case "cos": rez = Math.cos(x); break;
+        case "tan": rez = Math.tan(x); break;
+        case "log": rez = Math.log10(x); break;
+        case "ln": rez = Math.log(x); break;
+        case "kv": rez = Math.pow(x, 2); break;
+        case "kub": rez = Math.pow(x, 3); break;
+        case "pow": rez = Math.pow(x, y); break;
+      }
+      alert("Rezultat: " + rez);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Sredine</title>
+</head>
+<body>
+  <h2>Rezultat</h2>
+  <div id="rezultat"></div>
+
+  <script>
+    let unos = prompt("Unesi brojeve odvojene zarezom (npr. 1, 4, 9):");
+    let brojevi = unos.split(',').map(Number).filter(n => !isNaN(n) && n > 0);
+
+    let suma = brojevi.reduce((a, b) => a + b, 0);
+    let aritmeticka = (suma / brojevi.length).toFixed(2);
+
+    let proizvod = brojevi.reduce((a, b) => a * b, 1);
+    let geometrijska = Math.pow(proizvod, 1 / brojevi.length).toFixed(2);
+
+    document.getElementById("rezultat").innerHTML = `
+      Aritmetička sredina: ${aritmeticka}<br>
+      Geometrijska sredina: ${geometrijska}
+    `;
+  </script>
+</body>
+</html>

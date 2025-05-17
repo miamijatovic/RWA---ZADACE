@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paljenje i gašenje žarulje</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #prekidac-kontejner {
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  #prekidac-slika {
+    width: 80px;
+    height: auto;
+  }
+
+  #zarulja-slika {
+    width: 100px;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+  <div id="prekidac-kontejner">
+    <img id="prekidac-slika" src="off-removebg-preview.png" alt="Prekidač OFF">
+  </div>
+
+  <img id="zarulja-slika" src="zarulja_off_2.png" alt="Žarulja ugašena">
+
+  <script>
+    const prekidacSlika = document.getElementById('prekidac-slika');
+    const zaruljaSlika = document.getElementById('zarulja-slika');
+    let ukljuceno = false;
+
+    document.getElementById('prekidac-kontejner').addEventListener('click', function() {
+      if (ukljuceno) {
+        prekidacSlika.src = 'off-removebg-preview.png';
+        prekidacSlika.alt = 'Prekidač OFF';
+        zaruljaSlika.src = 'zarulja_off_2.png';
+        zaruljaSlika.alt = 'Žarulja ugašena';
+        ukljuceno = false;
+      } else {
+        prekidacSlika.src = 'on-removebg-preview.png';
+        prekidacSlika.alt = 'Prekidač ON';
+        zaruljaSlika.src = 'zarulja_on_2.png';
+        zaruljaSlika.alt = 'Žarulja upaljena';
+        ukljuceno = true;
+      }
+    });
+  </script>
+
+</body>
+</html>
