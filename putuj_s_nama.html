@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ime Prezime">
+    <meta name="description" content="Turistička agencija Putuj S Nama - Vaša vrata u svijet avantura.">
+    <meta name="keywords" content="turizam, putovanja, aranžmani, agencija">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Putuj S Nama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #006699;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #004466;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 5px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background: #005580;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #006699;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header, footer {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Turistička agencija Putuj S Nama</h1>
+        <p>Vaša vrata u svijet avantura!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Početna</a></li>
+            <li><a href="#">Destinacije</a></li>
+            <li><a href="#">O nama</a></li>
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Vježbe</a></li>
+            <li><a href="#">Zadaće</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>O našoj agenciji</h2>
+            <p>Specijalizirani smo za nezaboravna putovanja diljem svijeta. Naši paketi uključuju smještaj, vodiča i osiguranje.</p>
+        </section>
+
+        <section>
+            <h3>Popularne destinacije</h3>
+            <img src="https://via.placeholder.com/600x300" alt="Destinacija">
+        </section>
+
+        <section>
+            <h3>Naš tim</h3>
+            <table>
+                <tr>
+                    <th>Ime</th>
+                    <th>Pozicija</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>Ana Marić</td>
+                    <td>Voditeljica agencije</td>
+                    <td>ana@putujsnama.hr</td>
+                </tr>
+                <tr>
+                    <td>Ivan Kovač</td>
+                    <td>Turistički vodič</td>
+                    <td>ivan@putujsnama.hr</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Kontaktirajte nas</h3>
+            <p>Email: <a href="mailto:info@putujsnama.hr">info@putujsnama.hr</a></p>
+            <p>Posjetite nas: <a href="https://www.fsre.sum.ba" target="_blank">FSRE Mostar</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Putuj S Nama. Sva prava pridržana.</p>
+    </footer>
+</body>
+</html>
